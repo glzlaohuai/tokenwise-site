@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-title-en="TokenWise Support" data-title-zh="TokenWise 支持">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TokenWise Support</title>
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#0d0f12;color:#e6eaf0;font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",Roboto,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:56px 24px 96px}
+h1{font-size:30px;margin:0 0 4px}
+h2{font-size:20px;margin:40px 0 10px;color:#fff}
+h3{font-size:16px;margin:24px 0 4px;color:#fff}
+.sub{color:#8a94a3;margin:0 0 12px}
+a{color:#4aa8ff}
+strong{color:#fff}
+/* language switcher */
+.langsw{position:fixed;top:16px;right:16px;display:flex;gap:2px;background:#14171c;border:1px solid #262b33;border-radius:999px;padding:3px;z-index:10}
+.langsw button{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:#8a94a3;font:inherit;font-size:13px;line-height:1;padding:6px 12px;border-radius:999px;cursor:pointer}
+html[data-lang="en"] .lang-en,html[data-lang="zh"] .lang-zh{background:#204a73;color:#e6eaf0}
+html[data-lang="en"] [data-lang-block="zh"],html[data-lang="zh"] [data-lang-block="en"]{display:none}
+</style>
+<script>try{var l=localStorage.getItem('tw-lang');if(l==='en'||l==='zh'){var e=document.documentElement;e.setAttribute('data-lang',l);e.setAttribute('lang',l==='zh'?'zh-CN':'en');var t=e.getAttribute(l==='zh'?'data-title-zh':'data-title-en');if(t)document.title=t;}}catch(e){}</script>
+</head>
+<body>
+<div class="langsw" role="group" aria-label="Language / 语言">
+<button type="button" class="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
+<button type="button" class="lang-zh" data-set-lang="zh" aria-pressed="false">中文</button>
+</div>
+<div class="wrap">
+
+<div data-lang-block="en">
+<h1>TokenWise Support</h1>
+<p class="sub">Need help? Check the FAQ below or email us directly.</p>
+
+<h2>FAQ</h2>
+
+<h3>Which tools are supported?</h3>
+<p>Claude Code, Codex, OpenCode, and Gemini.</p>
+
+<h3>Is my data safe?</h3>
+<p>All processing happens locally; nothing is uploaded. See the <a href="privacy.html">Privacy Policy</a>.</p>
+
+<h3>How do I get started?</h3>
+<p>On first launch, an onboarding guide walks you through authorizing each source. In <strong>Settings → Sources</strong>, grant access to the relevant folders and TokenWise will read your local usage. It lives in your menu bar — click the icon for an overview.</p>
+
+<h3>How do I set quota alerts?</h3>
+<p>In <strong>Settings → Quota &amp; Alerts</strong>, set a daily token limit per project or globally. You’ll be alerted as you approach or exceed it, and alerts can be pushed to a channel you configure.</p>
+
+<h3>How do I uninstall?</h3>
+<p>Quit the app and delete TokenWise from your Applications folder; local data is removed with it.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:494763134@qq.com">494763134@qq.com</a></p>
+</div>
+
+<div data-lang-block="zh">
+<h1>TokenWise 支持</h1>
+<p class="sub">需要帮助？先看看常见问题，或直接邮件联系我们。</p>
+
+<h2>常见问题</h2>
+
+<h3>支持哪些工具？</h3>
+<p>Claude Code、Codex、OpenCode、Gemini。</p>
+
+<h3>我的数据安全吗？</h3>
+<p>所有统计都在本机完成，不上传任何数据。详见 <a href="privacy.html">隐私政策</a>。</p>
+
+<h3>如何开始使用？</h3>
+<p>首次启动会引导你逐个授权数据源；在「设置 → 数据源」中授权对应目录后，即可读取本地用量。TokenWise 常驻菜单栏，点击图标即可查看概览。</p>
+
+<h3>如何设置额度预警？</h3>
+<p>在「设置 → 额度 &amp; 预警」为项目或全局设置每日 token 上限，接近或超限时会提醒你，也可推送到你自己配置的渠道。</p>
+
+<h3>如何卸载？</h3>
+<p>退出 App 后，从「应用程序」中删除 TokenWise 即可，本地数据随之清除。</p>
+
+<h2>联系</h2>
+<p><a href="mailto:494763134@qq.com">494763134@qq.com</a></p>
+</div>
+
+</div>
+<script>
+(function(){
+  var doc=document.documentElement;
+  function apply(l,save){
+    doc.setAttribute('data-lang',l);
+    doc.setAttribute('lang',l==='zh'?'zh-CN':'en');
+    var t=doc.getAttribute(l==='zh'?'data-title-zh':'data-title-en');
+    if(t)document.title=t;
+    var b=document.querySelectorAll('[data-set-lang]');
+    for(var i=0;i<b.length;i++)b[i].setAttribute('aria-pressed',b[i].getAttribute('data-set-lang')===l?'true':'false');
+    if(save){try{localStorage.setItem('tw-lang',l);}catch(e){}}
+  }
+  var b=document.querySelectorAll('[data-set-lang]');
+  for(var i=0;i<b.length;i++)(function(x){x.addEventListener('click',function(){apply(x.getAttribute('data-set-lang'),true);});})(b[i]);
+  apply(doc.getAttribute('data-lang')||'en',false);
+})();
+</script>
+</body></html>
