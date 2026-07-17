@@ -1,69 +1,220 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="en" data-lang="en"
+  data-title-en="TokenWise — AI coding token usage, in your menu bar"
+  data-title-zh="TokenWise — 菜单栏里的 AI 编程用量统计">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TokenWise</title>
-<style>
-:root{color-scheme:dark}
-*{box-sizing:border-box}
-body{margin:0;background:#0d0f12;color:#e6eaf0;font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",Roboto,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center}
-.wrap{max-width:640px;padding:48px 24px;text-align:center}
-h1{font-size:40px;margin:0 0 8px;background:linear-gradient(90deg,#4aa8ff,#8a7cff);-webkit-background-clip:text;background-clip:text;color:transparent}
-p{color:#c7ced8}
-.links{margin:32px 0 0;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.links a{color:#4aa8ff;text-decoration:none;border:1px solid #204a73;border-radius:10px;padding:10px 20px}
-.muted{margin-top:40px;color:#5b6472;font-size:13px}
-a{color:#4aa8ff}
-/* language switcher */
-.langsw{position:fixed;top:16px;right:16px;display:flex;gap:2px;background:#14171c;border:1px solid #262b33;border-radius:999px;padding:3px;z-index:10}
-.langsw button{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:#8a94a3;font:inherit;font-size:13px;line-height:1;padding:6px 12px;border-radius:999px;cursor:pointer}
-html[data-lang="en"] .lang-en,html[data-lang="zh"] .lang-zh{background:#204a73;color:#e6eaf0}
-html[data-lang="en"] [data-lang-block="zh"],html[data-lang="zh"] [data-lang-block="en"]{display:none}
-</style>
+<title>TokenWise — AI coding token usage, in your menu bar</title>
+<meta name="description" content="TokenWise is a macOS menu-bar tool that tracks token usage across Claude Code, Codex, OpenCode, and Gemini — computed locally, never uploaded.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TokenWise — AI coding token usage, in your menu bar">
+<meta property="og:description" content="Track token usage across Claude Code, Codex, OpenCode & Gemini, right in your macOS menu bar. Computed locally, never uploaded.">
+<meta property="og:url" content="https://glzlaohuai.github.io/tokenwise-site/">
+<meta property="og:image" content="https://glzlaohuai.github.io/tokenwise-site/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/styles.css">
 <script>try{var l=localStorage.getItem('tw-lang');if(l==='en'||l==='zh'){var e=document.documentElement;e.setAttribute('data-lang',l);e.setAttribute('lang',l==='zh'?'zh-CN':'en');var t=e.getAttribute(l==='zh'?'data-title-zh':'data-title-en');if(t)document.title=t;}}catch(e){}</script>
 </head>
 <body>
-<div class="langsw" role="group" aria-label="Language / 语言">
-<button type="button" class="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
-<button type="button" class="lang-zh" data-set-lang="zh" aria-pressed="false">中文</button>
-</div>
-<div class="wrap">
-<h1>TokenWise</h1>
 
-<div data-lang-block="en">
-<p>Local token usage tracking for AI coding tools — right in your macOS menu bar.</p>
-<div class="links">
-<a href="privacy.html">Privacy</a>
-<a href="support.html">Support</a>
-</div>
-</div>
+<!-- ===== nav ===== -->
+<nav class="nav"><div class="container">
+  <a class="brand" href="./"><img src="assets/icon.png" alt="TokenWise">TokenWise</a>
+  <div class="nav-links">
+    <a class="hide-sm" href="#features"><span data-lang-block="en">Features</span><span data-lang-block="zh">功能</span></a>
+    <a class="hide-sm" href="privacy.html"><span data-lang-block="en">Privacy</span><span data-lang-block="zh">隐私</span></a>
+    <a class="hide-sm" href="support.html"><span data-lang-block="en">Support</span><span data-lang-block="zh">支持</span></a>
+    <div class="langsw" role="group" aria-label="Language / 语言">
+      <button type="button" class="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang-zh" data-set-lang="zh" aria-pressed="false">中文</button>
+    </div>
+  </div>
+</div></nav>
 
-<div data-lang-block="zh">
-<p>本地统计 Claude Code / Codex / OpenCode / Gemini 的 token 用量，常驻菜单栏。隐私优先，绝不上传。</p>
-<div class="links">
-<a href="privacy.html">隐私政策</a>
-<a href="support.html">支持</a>
-</div>
-</div>
+<!-- ===== hero ===== -->
+<header class="hero">
+  <div class="glow"></div>
+  <div class="container">
+    <p class="eyebrow"><span data-lang-block="en">Menu-bar developer tool</span><span data-lang-block="zh">菜单栏开发者工具</span></p>
+    <h1>
+      <span data-lang-block="en">Your AI coding tokens,<br>always <span class="gradient">one glance</span> away.</span>
+      <span data-lang-block="zh">AI 编程用量，<br>菜单栏<span class="gradient">一眼</span>掌握。</span>
+    </h1>
+    <p class="sub">
+      <span data-lang-block="en">TokenWise lives in your macOS menu bar and tracks token usage across Claude Code, Codex, OpenCode, and Gemini — computed entirely on your Mac, never uploaded.</span>
+      <span data-lang-block="zh">TokenWise 常驻 macOS 菜单栏，统计 Claude Code、Codex、OpenCode、Gemini 的 token 用量——全部在本机计算，绝不上传。</span>
+    </p>
+    <div class="cta">
+      <!-- TODO: replace idXXXXXXXXXX with the real Mac App Store id after launch -->
+      <a class="btn btn-appstore" href="https://apps.apple.com/app/idXXXXXXXXXX">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.36 12.9c.02 2.3 2.02 3.06 2.04 3.07-.02.05-.32 1.1-1.06 2.18-.64.94-1.31 1.87-2.35 1.89-1.03.02-1.36-.61-2.54-.61-1.18 0-1.55.59-2.52.63-1.01.04-1.78-1.01-2.42-1.95-1.32-1.9-2.33-5.38-.97-7.73.67-1.17 1.87-1.91 3.17-1.93.99-.02 1.93.67 2.54.67.6 0 1.75-.83 2.95-.71.5.02 1.91.2 2.81 1.52-.07.05-1.68.98-1.66 2.93M14.44 6.03c.54-.65.9-1.56.8-2.46-.78.03-1.72.52-2.28 1.17-.5.57-.94 1.5-.82 2.38.87.07 1.76-.44 2.3-1.09"/></svg>
+        <span data-lang-block="en">Download on the Mac App Store</span><span data-lang-block="zh">在 Mac App Store 下载</span>
+      </a>
+      <a class="btn btn-ghost" href="#features"><span data-lang-block="en">See what it does</span><span data-lang-block="zh">看看能做什么</span></a>
+    </div>
+    <p class="note"><span data-lang-block="en">Free for a limited time.</span><span data-lang-block="zh">现在限时免费。</span></p>
+  </div>
+  <div class="container">
+    <div class="hero-visual reveal">
+      <div class="shot shot-analysis" data-shot="analysis" role="img" aria-label="TokenWise detail window"></div>
+      <div class="shot shot-overview" data-shot="overview" role="img" aria-label="TokenWise menu-bar overview"></div>
+    </div>
+  </div>
+</header>
 
-<p class="muted">© 2026 hiimobapps · <a href="mailto:494763134@qq.com">494763134@qq.com</a></p>
-</div>
-<script>
-(function(){
-  var doc=document.documentElement;
-  function apply(l,save){
-    doc.setAttribute('data-lang',l);
-    doc.setAttribute('lang',l==='zh'?'zh-CN':'en');
-    var t=doc.getAttribute(l==='zh'?'data-title-zh':'data-title-en');
-    if(t)document.title=t;
-    var b=document.querySelectorAll('[data-set-lang]');
-    for(var i=0;i<b.length;i++)b[i].setAttribute('aria-pressed',b[i].getAttribute('data-set-lang')===l?'true':'false');
-    if(save){try{localStorage.setItem('tw-lang',l);}catch(e){}}
-  }
-  var b=document.querySelectorAll('[data-set-lang]');
-  for(var i=0;i<b.length;i++)(function(x){x.addEventListener('click',function(){apply(x.getAttribute('data-set-lang'),true);});})(b[i]);
-  apply(doc.getAttribute('data-lang')||'en',false);
-})();
-</script>
-</body></html>
+<!-- ===== sources strip ===== -->
+<section class="sources"><div class="container">
+  <span class="lead"><span data-lang-block="en">Works with</span><span data-lang-block="zh">已支持</span></span>
+  <b>Claude Code</b><span class="dot">·</span><b>Codex</b><span class="dot">·</span><b>OpenCode</b><span class="dot">·</span><b>Gemini</b>
+</div></section>
+
+<!-- ===== feature 1: overview ===== -->
+<section class="feature" id="features"><div class="container"><div class="row reveal">
+  <div class="copy">
+    <h2><span data-lang-block="en">Everything in your menu bar</span><span data-lang-block="zh">一眼看清 AI 编程用量</span></h2>
+    <p class="lead">
+      <span data-lang-block="en">Today, this week, this month — token totals with a per-source breakdown, a mini usage-trend chart, and your quota bar. One click from the menu bar, no window to open.</span>
+      <span data-lang-block="zh">今日 / 本周 / 本月 token 用量，按来源拆分，用量趋势迷你图和额度进度条——点一下菜单栏就看到，不必开窗、不打断心流。</span>
+    </p>
+    <ul>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Claude Code, Codex, OpenCode &amp; Gemini in one place</span><span data-lang-block="zh">Claude Code、Codex、OpenCode、Gemini 汇总一处</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Live token rate over the last 60 seconds</span><span data-lang-block="zh">最近 60 秒的实时 token 速率</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">A quota bar that fills as you go</span><span data-lang-block="zh">额度进度条随用量实时推进</span></li>
+    </ul>
+  </div>
+  <div class="figure"><div class="figure--narrow"><div class="shot" data-shot="overview" role="img" aria-label="TokenWise menu-bar overview"></div></div></div>
+</div></div></section>
+
+<!-- ===== feature 2: analysis ===== -->
+<section class="feature rev"><div class="container"><div class="row reveal">
+  <div class="copy">
+    <h2><span data-lang-block="en">Trends and breakdowns, in depth</span><span data-lang-block="zh">趋势与占比，深度分析</span></h2>
+    <p class="lead">
+      <span data-lang-block="en">Open the detail window for the full picture: usage trends over time and share-of-usage broken down by project, agent, and model — so you can see exactly where your tokens go.</span>
+      <span data-lang-block="zh">打开明细窗口看全貌：随时间的用量趋势，以及按项目、agent、模型拆分的占比——token 花在哪里一清二楚。</span>
+    </p>
+    <ul>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Filter by project, source, and date range</span><span data-lang-block="zh">按项目、来源、日期区间筛选</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Trend chart with hover details</span><span data-lang-block="zh">趋势图支持悬停查看细节</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Share-of-usage by project / agent / model</span><span data-lang-block="zh">按项目 / agent / 模型看占比</span></li>
+    </ul>
+  </div>
+  <div class="figure"><div class="shot" data-shot="analysis" role="img" aria-label="TokenWise analysis view"></div></div>
+</div></div></section>
+
+<!-- ===== feature 3: conversations ===== -->
+<section class="feature"><div class="container"><div class="row reveal">
+  <div class="copy">
+    <h2><span data-lang-block="en">Revisit every conversation</span><span data-lang-block="zh">回看每一次对话</span></h2>
+    <p class="lead">
+      <span data-lang-block="en">Every session is right there to reopen. Read the full conversation with proper Markdown rendering, export it to .md, or copy a ready-to-run resume command to pick up where you left off.</span>
+      <span data-lang-block="zh">每一次会话都能重新打开：Markdown 完整渲染的对话正文，可导出 .md，或一键复制 resume 命令，回到中断处继续。</span>
+    </p>
+    <ul>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Markdown-rendered conversation view</span><span data-lang-block="zh">Markdown 渲染的对话视图</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Export any conversation to Markdown</span><span data-lang-block="zh">任意对话导出为 Markdown</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">One-click resume command copy</span><span data-lang-block="zh">一键复制 resume 命令</span></li>
+    </ul>
+  </div>
+  <div class="figure"><div class="shot" data-shot="conversations" role="img" aria-label="TokenWise conversation viewer"></div></div>
+</div></div></section>
+
+<!-- ===== feature 4: customize ===== -->
+<section class="feature rev"><div class="container"><div class="row reveal">
+  <div class="copy">
+    <h2><span data-lang-block="en">Make it yours</span><span data-lang-block="zh">菜单栏，随你定制</span></h2>
+    <p class="lead">
+      <span data-lang-block="en">Choose what shows in your menu bar, switch between light, dark, or system appearance, pick English or 中文, and let it launch at login. It stays out of the way until you need it.</span>
+      <span data-lang-block="zh">自定义菜单栏显示内容，深色 / 浅色 / 跟随系统随意切换，中英双语，支持开机自启——不需要时安静待命。</span>
+    </p>
+    <ul>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Show today's tokens, tightest quota %, or live rate</span><span data-lang-block="zh">菜单栏可显示今日 token、最紧额度 %、实时速率</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">Light / Dark / follow the system</span><span data-lang-block="zh">深色 / 浅色 / 跟随系统</span></li>
+      <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg><span data-lang-block="en">English &amp; 中文, launch at login</span><span data-lang-block="zh">中英双语，开机自启</span></li>
+    </ul>
+  </div>
+  <div class="figure"><div class="shot" data-shot="settings" role="img" aria-label="TokenWise settings"></div></div>
+</div></div></section>
+
+<!-- ===== privacy band ===== -->
+<section class="privacy"><div class="container"><div class="card reveal">
+  <svg class="lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg>
+  <h2><span data-lang-block="en">Private by design</span><span data-lang-block="zh">隐私优先，数据不出本机</span></h2>
+  <p>
+    <span data-lang-block="en">TokenWise reads the local session files your AI tools already write — and computes everything on your Mac. Your usage and conversations are never uploaded to our servers. In fact, we don't run a server that could receive them.</span>
+    <span data-lang-block="zh">TokenWise 读取 AI 工具本就写在本机的会话文件，并在你的 Mac 上完成全部计算。你的用量与对话绝不上传到我们的服务器——事实上，我们根本没有能接收它们的服务器。</span>
+  </p>
+  <p>
+    <span data-lang-block="en">Networking is used only for the push channel you set up yourself.</span>
+    <span data-lang-block="zh">网络仅用于你自己配置的推送渠道。</span>
+  </p>
+  <div>
+    <span class="pill"><span data-lang-block="en">App Privacy: Data Not Collected</span><span data-lang-block="zh">App 隐私标签：不收集数据</span></span>
+    <span class="pill"><span data-lang-block="en">Sandboxed</span><span data-lang-block="zh">沙盒运行</span></span>
+  </div>
+  <a class="more-link" href="privacy.html"><span data-lang-block="en">Read the privacy policy →</span><span data-lang-block="zh">查看隐私政策 →</span></a>
+</div></div></section>
+
+<!-- ===== more features grid ===== -->
+<section class="more"><div class="container">
+  <h2 class="reveal"><span data-lang-block="en">And a few more things</span><span data-lang-block="zh">还有这些</span></h2>
+  <div class="grid reveal">
+    <div class="card">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M6 9a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10.4 20a1.8 1.8 0 0 0 3.2 0"/></svg>
+      <h3><span data-lang-block="en">Quota &amp; alerts</span><span data-lang-block="zh">额度与预警</span></h3>
+      <p><span data-lang-block="en">Set daily token limits per project or globally, and get alerted before you blow past them.</span><span data-lang-block="zh">为项目或全局设置每日 token 上限，接近或超限及时提醒。</span></p>
+    </div>
+    <div class="card">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 3L10.5 13.5M21 3l-6.5 18-4-8-8-4L21 3z"/></svg>
+      <h3><span data-lang-block="en">Push channels</span><span data-lang-block="zh">推送渠道</span></h3>
+      <p><span data-lang-block="en">Send alerts to a webhook or channel you configure — straight from your device.</span><span data-lang-block="zh">把预警推送到你自己配置的 webhook 或渠道，直接从本机发出。</span></p>
+    </div>
+    <div class="card">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>
+      <h3><span data-lang-block="en">Bilingual</span><span data-lang-block="zh">中英双语</span></h3>
+      <p><span data-lang-block="en">A full English and 简体中文 interface.</span><span data-lang-block="zh">完整的英文与简体中文界面。</span></p>
+    </div>
+    <div class="card">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor" stroke="none"/></svg>
+      <h3><span data-lang-block="en">Light &amp; Dark</span><span data-lang-block="zh">深色浅色</span></h3>
+      <p><span data-lang-block="en">Looks right in any appearance, or follows the system.</span><span data-lang-block="zh">深浅色皆宜，也可跟随系统。</span></p>
+    </div>
+    <div class="card">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 3v9"/><path d="M6.6 6.6a8 8 0 1 0 10.8 0"/></svg>
+      <h3><span data-lang-block="en">Launch at login</span><span data-lang-block="zh">开机自启</span></h3>
+      <p><span data-lang-block="en">Ready in your menu bar from the moment you log in.</span><span data-lang-block="zh">登录即常驻菜单栏，随时待命。</span></p>
+    </div>
+    <div class="card">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z"/></svg>
+      <h3><span data-lang-block="en">Sandboxed</span><span data-lang-block="zh">沙盒安全</span></h3>
+      <p><span data-lang-block="en">Sandboxed, with file access only where you explicitly grant it.</span><span data-lang-block="zh">沙盒运行，文件访问仅限你显式授权之处。</span></p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===== final cta ===== -->
+<section class="final"><div class="container reveal">
+  <h2><span data-lang-block="en">Stay on top of your token usage.</span><span data-lang-block="zh">把 token 用量，握在手里。</span></h2>
+  <p><span data-lang-block="en">Free for a limited time.</span><span data-lang-block="zh">现在限时免费。</span></p>
+  <!-- TODO: replace idXXXXXXXXXX with the real Mac App Store id after launch -->
+  <a class="btn btn-appstore" href="https://apps.apple.com/app/idXXXXXXXXXX">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.36 12.9c.02 2.3 2.02 3.06 2.04 3.07-.02.05-.32 1.1-1.06 2.18-.64.94-1.31 1.87-2.35 1.89-1.03.02-1.36-.61-2.54-.61-1.18 0-1.55.59-2.52.63-1.01.04-1.78-1.01-2.42-1.95-1.32-1.9-2.33-5.38-.97-7.73.67-1.17 1.87-1.91 3.17-1.93.99-.02 1.93.67 2.54.67.6 0 1.75-.83 2.95-.71.5.02 1.91.2 2.81 1.52-.07.05-1.68.98-1.66 2.93M14.44 6.03c.54-.65.9-1.56.8-2.46-.78.03-1.72.52-2.28 1.17-.5.57-.94 1.5-.82 2.38.87.07 1.76-.44 2.3-1.09"/></svg>
+    <span data-lang-block="en">Download on the Mac App Store</span><span data-lang-block="zh">在 Mac App Store 下载</span>
+  </a>
+</div></section>
+
+<!-- ===== footer ===== -->
+<footer class="footer"><div class="container">
+  <span class="brand">© 2026 hiimobapps</span>
+  <div class="links">
+    <a href="privacy.html"><span data-lang-block="en">Privacy</span><span data-lang-block="zh">隐私</span></a>
+    <a href="support.html"><span data-lang-block="en">Support</span><span data-lang-block="zh">支持</span></a>
+    <a href="mailto:494763134@qq.com">494763134@qq.com</a>
+  </div>
+</div></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

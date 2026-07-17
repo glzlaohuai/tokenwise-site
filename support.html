@@ -1,37 +1,33 @@
 <!doctype html>
-<html lang="en" data-lang="en" data-title-en="TokenWise Support" data-title-zh="TokenWise 支持">
+<html lang="en" data-lang="en" data-title-en="TokenWise — Support" data-title-zh="TokenWise — 支持">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TokenWise Support</title>
-<style>
-:root{color-scheme:dark}
-*{box-sizing:border-box}
-body{margin:0;background:#0d0f12;color:#e6eaf0;font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Segoe UI",Roboto,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:56px 24px 96px}
-h1{font-size:30px;margin:0 0 4px}
-h2{font-size:20px;margin:40px 0 10px;color:#fff}
-h3{font-size:16px;margin:24px 0 4px;color:#fff}
-.sub{color:#8a94a3;margin:0 0 12px}
-a{color:#4aa8ff}
-strong{color:#fff}
-/* language switcher */
-.langsw{position:fixed;top:16px;right:16px;display:flex;gap:2px;background:#14171c;border:1px solid #262b33;border-radius:999px;padding:3px;z-index:10}
-.langsw button{appearance:none;-webkit-appearance:none;border:0;background:transparent;color:#8a94a3;font:inherit;font-size:13px;line-height:1;padding:6px 12px;border-radius:999px;cursor:pointer}
-html[data-lang="en"] .lang-en,html[data-lang="zh"] .lang-zh{background:#204a73;color:#e6eaf0}
-html[data-lang="en"] [data-lang-block="zh"],html[data-lang="zh"] [data-lang-block="en"]{display:none}
-</style>
+<title>TokenWise — Support</title>
+<meta name="description" content="TokenWise support — FAQ and contact for the macOS menu-bar token usage tracker.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="assets/styles.css">
 <script>try{var l=localStorage.getItem('tw-lang');if(l==='en'||l==='zh'){var e=document.documentElement;e.setAttribute('data-lang',l);e.setAttribute('lang',l==='zh'?'zh-CN':'en');var t=e.getAttribute(l==='zh'?'data-title-zh':'data-title-en');if(t)document.title=t;}}catch(e){}</script>
 </head>
 <body>
-<div class="langsw" role="group" aria-label="Language / 语言">
-<button type="button" class="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
-<button type="button" class="lang-zh" data-set-lang="zh" aria-pressed="false">中文</button>
-</div>
-<div class="wrap">
+
+<nav class="nav"><div class="container">
+  <a class="brand" href="./"><img src="assets/icon.png" alt="TokenWise">TokenWise</a>
+  <div class="nav-links">
+    <a class="hide-sm" href="index.html#features"><span data-lang-block="en">Features</span><span data-lang-block="zh">功能</span></a>
+    <a class="hide-sm" href="privacy.html"><span data-lang-block="en">Privacy</span><span data-lang-block="zh">隐私</span></a>
+    <a class="hide-sm" href="support.html"><span data-lang-block="en">Support</span><span data-lang-block="zh">支持</span></a>
+    <div class="langsw" role="group" aria-label="Language / 语言">
+      <button type="button" class="lang-en" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" class="lang-zh" data-set-lang="zh" aria-pressed="false">中文</button>
+    </div>
+  </div>
+</div></nav>
+
+<main class="doc">
 
 <div data-lang-block="en">
-<h1>TokenWise Support</h1>
+<h1>Support</h1>
 <p class="sub">Need help? Check the FAQ below or email us directly.</p>
 
 <h2>FAQ</h2>
@@ -56,7 +52,7 @@ html[data-lang="en"] [data-lang-block="zh"],html[data-lang="zh"] [data-lang-bloc
 </div>
 
 <div data-lang-block="zh">
-<h1>TokenWise 支持</h1>
+<h1>支持</h1>
 <p class="sub">需要帮助？先看看常见问题，或直接邮件联系我们。</p>
 
 <h2>常见问题</h2>
@@ -80,22 +76,17 @@ html[data-lang="en"] [data-lang-block="zh"],html[data-lang="zh"] [data-lang-bloc
 <p><a href="mailto:494763134@qq.com">494763134@qq.com</a></p>
 </div>
 
-</div>
-<script>
-(function(){
-  var doc=document.documentElement;
-  function apply(l,save){
-    doc.setAttribute('data-lang',l);
-    doc.setAttribute('lang',l==='zh'?'zh-CN':'en');
-    var t=doc.getAttribute(l==='zh'?'data-title-zh':'data-title-en');
-    if(t)document.title=t;
-    var b=document.querySelectorAll('[data-set-lang]');
-    for(var i=0;i<b.length;i++)b[i].setAttribute('aria-pressed',b[i].getAttribute('data-set-lang')===l?'true':'false');
-    if(save){try{localStorage.setItem('tw-lang',l);}catch(e){}}
-  }
-  var b=document.querySelectorAll('[data-set-lang]');
-  for(var i=0;i<b.length;i++)(function(x){x.addEventListener('click',function(){apply(x.getAttribute('data-set-lang'),true);});})(b[i]);
-  apply(doc.getAttribute('data-lang')||'en',false);
-})();
-</script>
-</body></html>
+</main>
+
+<footer class="footer"><div class="container">
+  <span class="brand">© 2026 hiimobapps</span>
+  <div class="links">
+    <a href="index.html"><span data-lang-block="en">Home</span><span data-lang-block="zh">首页</span></a>
+    <a href="privacy.html"><span data-lang-block="en">Privacy</span><span data-lang-block="zh">隐私</span></a>
+    <a href="mailto:494763134@qq.com">494763134@qq.com</a>
+  </div>
+</div></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
