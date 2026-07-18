@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build web-optimized image assets for the TokenWise site from the raw app
+"""Build web-optimized image assets for the Tokenly site from the raw app
 screenshots.
 
 Reads raw macOS screenshots (per language) and emits compact WebP versions into
@@ -104,7 +104,7 @@ def build_og():
     except Exception as e:
         print("  og icon skipped:", e)
     # wordmark + tagline
-    d.text((250, 168), "TokenWise", font=font(HELVETICA, 92), fill=(245, 247, 250))
+    d.text((250, 168), "Tokenly", font=font(HELVETICA, 92), fill=(245, 247, 250))
     d.text((252, 292), "AI coding token usage, right in your menu bar.",
            font=font(HELVETICA, 40), fill=(150, 160, 176))
     d.text((252, 356), "Claude Code · Codex · OpenCode · Gemini",

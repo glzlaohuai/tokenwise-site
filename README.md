@@ -1,6 +1,6 @@
-# TokenWise — Website
+# Tokenly — Website
 
-Marketing landing page, Privacy Policy, and Support pages for **TokenWise**, a local
+Marketing landing page, Privacy Policy, and Support pages for **Tokenly**, a local
 token-usage tracker for AI coding tools (Claude Code / Codex / OpenCode / Gemini)
 that lives in the macOS menu bar.
 
