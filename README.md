@@ -32,7 +32,6 @@ python tools/build_assets.py --src /path/to/appstore/screenshots/raw
 
 Hosted on GitHub Pages from `main`. Pushing to `main` redeploys automatically.
 
-> After the app ships, replace the `idXXXXXXXXXX` placeholder in the “Download on the
-> Mac App Store” links (search `apps.apple.com` in `index.html`) with the real URL.
+> **Mac App Store:** https://apps.apple.com/cn/app/tokenwise-ai-usage/id6791952329?mt=12
 
 Contact: 494763134@qq.com
